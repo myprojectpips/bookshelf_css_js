@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bookshelf Apps</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+    <nav class="bg-primary text-center p-1">
+        <b><h2>Bookshelf Apps</h2></b>
+    </nav>
+
+    <div class="row">
+        <div class="mt-5 mx-auto w-30">
+            <div class="border border-radius-1 p-2 shadow">
+                <h2 class="mb-1">Form Input Data Buku</h2>
+                <hr>
+                
+                <!-- Form Book Input -->
+                <form action="" method="#" id="form">
+                    <div class="mt-3">
+                        <label>Judul Buku : </label>
+                        <input type="text" name="judul" id="judul_buku" class="form-control form-control-md mt-1" required>
+                    </div>
+                    <div class="mt-1">
+                        <label>Penulis : </label>
+                        <input type="text" name="penulis" id="penulis_buku" class="form-control form-control-md mt-1" required>
+                    </div>
+                    <div class="mt-1">
+                        <label>Tahun : </label>
+                        <input type="number" name="tahun" id="tahun_terbit" class="form-control form-control-md mt-1" required>
+                    </div>
+                    
+                    <div class="mt-1">
+                        <input type="checkbox" name="isComplete" id="isComplete">
+                        <label for="isComplete">Selesai Dibaca</label>
+                    </div>
+
+                    <button type="submit" name="Submit" class="btn-primary w-100" id="simpan">Simpan</button>
+                </form>
+                <!-- End Form -->
+
+            </div>
+        </div>
+        
+
+        <!-- Content and Filter -->
+        <div class="mt-5 mx-auto w-50">
+
+            <!-- Box Filter -->
+            <div class="border border-radius-1 p-2 mb-3">
+                <h2 class="mb-1">Cari Buku</h2>
+                <hr>
+                
+                <input type="text" class="form-control form-control-md mt-3 mb-2" id="filter" onkeyup="filter();" placeholder="Cari Buku Anda....">
+                <small class="text-secondary"><i>Silahkan ketik apa saja karena sistem filter ini otomatis.</i></small>
+            </div>
+            <!-- End Filter -->
+
+            <!-- Box Content -->
+            <div class="border border-radius-1 p-2">
+                <h2 class="mb-1">Belum dibaca</h2>
+                <hr>
+                
+                <div id="uncomplete-read">
+                    
+                </div>
+            </div>
+    
+            <div class="border border-radius-1 p-2 mt-3">
+                <h2 class="mb-1">Selesai dibaca</h2>
+                <hr>
+                
+                <div id="complete-read">
+
+                </div>
+            </div>
+            <!-- End Box Content -->
+
+        </div>
+        <!-- End Content and Filter -->
+
+    </div>
+</body>
+
+<!-- Main JS -->
+<script src="asset/js/dom.js"></script>
+<script src="asset/js/script.js"></script>
+<script src="asset/js/data.js"></script>
+</html>
